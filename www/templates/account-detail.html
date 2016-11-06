@@ -1,0 +1,23 @@
+<ion-view view-title="{{item.name}}">
+  <ion-content class="padding">
+    <div class="list card">
+
+  <div class="item item-avatar">
+    <img ng-src="{{foodPrefix}}{{item.img}}">
+    <h2>{{item.title}}</h2>
+    <p>{{item.keywords}}</p>
+  </div>
+
+  <div class="item item-body">
+     <img class="full-image" ng-src="{{foodPrefix}}{{item.img}}">
+    <p compile='item.message'>
+      
+    </p>
+      <a href="#" class="subdued">{{item.count}}访问</a>
+      <a href="#" class="subdued">{{item.rcount}}回复</a>
+    </p>
+  </div>
+
+</div>
+  </ion-content>
+</ion-view>

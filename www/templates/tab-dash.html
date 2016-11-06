@@ -1,0 +1,16 @@
+<ion-view view-title="健康菜谱">
+  <ion-content class="padding">
+     
+    <ion-list>
+      <ion-item ng-repeat="item in datalists track by $index" class="item item-avatar" href="#/tab/dash/{{item.id}}">
+       <img ng-src="{{foodPrefix}}{{item.img}}" alt="" width=80 height=80>
+       <h2>{{item.name}}</h2>
+       <p>{{item.description}}</p>
+      </ion-item>
+  </ion-list>
+  <ion-infinite-scroll
+    on-infinite="loadMore()"
+    distance="1%">
+  </ion-infinite-scroll>
+  </ion-content>
+</ion-view>

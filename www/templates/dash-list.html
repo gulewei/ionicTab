@@ -1,0 +1,20 @@
+<ion-view view-title="菜谱分类">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in datalists" type="item-text-wrap" href="#/tab/account/{{item.id}}">
+        <img ng-src="{{foodPrefix}}{{item.img}}">
+        <h2>{{item.title}}</h2>
+        <p>{{item.description}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+    <ion-infinite-scroll
+    on-infinite="loadMore()"
+    distance="1%">
+  </ion-infinite-scroll>
+  </ion-content>
+</ion-view>
